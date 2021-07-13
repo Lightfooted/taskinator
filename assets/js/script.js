@@ -35,7 +35,8 @@ var createTaskEl = function(taskDataObj) {
   listItemEl.appendChild(taskInfoEl);
 
   var taskActionsEl = createTaskActions(taskIdCounter);
-  console.log(taskActionsEl);
+  listItemEl.appendChild(taskActionsEl);
+
   tasksToDoEl.appendChild(listItemEl);
 
   // increase task counter for next unique id
