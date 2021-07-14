@@ -1,3 +1,19 @@
+var pageContentEl = document.querySelector("#page-content");
+
+// other logic...
+
+var taskButtonHandler = function(event) {
+  console.log(event.target);
+
+  if (event.target.matches(".delete-btn")) {
+    // get the element's task id
+    var taskId = event.target.getAttribute("data-task-id");
+    console.log(taskId);
+  }
+};
+
+pageContentEl.addEventListener("click", taskButtonHandler);
+
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 var taskIdCounter = 0;
